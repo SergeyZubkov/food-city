@@ -1,0 +1,56 @@
+{
+	"firstWeek": [
+		{
+			"firstDish": "Столичный",
+			"secondDish": "Рассольник",
+			"thirdDish": "Котлеты с макаронами"
+		},
+		{
+			"firstDish": "Крабовый",
+			"secondDish": "Борщ",
+			"thirdDish": "Гуляш с гречкой"
+		},
+		{
+			"firstDish": "Морковь по-корейски",
+			"secondDish": "Грибной",
+			"thirdDish": "Рис с тефтелями"
+		},
+		{
+			"firstDish": "Селедка с луком",
+			"secondDish": "Рыбный",
+			"thirdDish": "Пюре с куриной отбивной"
+		},
+		{
+			"firstDish": "Овощной",
+			"secondDish": "Куриный",
+			"thirdDish": "Плов"
+		}
+	],
+	"secondWeek": [
+		{
+			"firstDish": "Оливье",
+			"secondDish": "Бульон с яйцом и гренками",
+			"thirdDish": "Жаркое по-домашнему"
+		},
+		{
+			"firstDish": "Цезарь",
+			"secondDish": "Харчо",
+			"thirdDish": "Гречка с котлетами"
+		},
+		{
+			"firstDish": "Витаминный",
+			"secondDish": "Куриный",
+			"thirdDish": "Пюре с 'Ежиками'"
+		},
+		{
+			"firstDish": "Мимоза",
+			"secondDish": "Рыбный",
+			"thirdDish": "Макаронами по-флотски"
+		},
+		{
+			"firstDish": "Винегрет",
+			"secondDish": "Щи",
+			"thirdDish": "Рис с Гуляшом"
+		}
+	]
+}

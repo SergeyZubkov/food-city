@@ -1,21 +1,54 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.css'
+
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+
+import Main from './main/Main';
+import Menu from './menu/Menu';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<Router>
+				<div>
+					<div
+						className='header'
+					>
+						<div
+							className='header__content'
+						>
+							<div
+								className='header__right'
+							>
+								<div
+									className='header-right__menu'
+								>
+									<Link to='/menu'>Все меню</Link>
+								</div>
+								<div
+									className='header-right__menu'
+								>
+									<Link to='/'>Меню на завтра</Link>
+								</div>
+								<div
+									className='btn'
+								>
+									Заказать обратный звонок
+								</div>
+							</div>
+						</div>
+					</div>
+					<div
+						className='content'
+					>
+						<Route exact path="/" component={Main}/>
+						<Route path="/menu" component={Menu}/>
+					</div>
+				</div>
+			</Router>
+		);
+	}
 }
 
 export default App;
