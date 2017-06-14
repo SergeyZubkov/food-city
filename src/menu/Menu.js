@@ -13,10 +13,14 @@ class Menu extends Component {
 		return (
 			<div className='menu'>
 				<h1> Меню</h1>
-				<h2> Текущая неделя </h2>
+				<div className="current-week">
+					<h2> Текущая неделя </h2>
 					{currentWeek.map((d, i) => <DayMenuItem key={i} dishs={d} day={i}/>)}
-				<h2> Следующая неделя </h2>
+				</div>
+				<div className="next-week">
+					<h2> Следующая неделя </h2>
 					{nextWeek.map((d, i) => <DayMenuItem key={i} dishs={d} day={i}/>)}
+				</div>
 				<div
 					className='menu-addition'
 				>

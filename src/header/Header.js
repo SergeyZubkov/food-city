@@ -42,11 +42,11 @@ class Header extends Component {
 					<div
 						className='header__phone'
 					>	
-						<img src={whatsapp} width='20px' alt='доставка' />
 						<a
 							href='tel:89296729324'
 							className='phone'
 						>
+							<img src={whatsapp} width='20px' alt='доставка' />
 							8 929 672-93-24
 						</a>
 						<a

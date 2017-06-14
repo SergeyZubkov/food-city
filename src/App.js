@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import deliver from './food-city-deliver.png';
+import deliver from './delivery.png';
 import './App.css'
 
 import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom';

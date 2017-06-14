@@ -1,8 +1,8 @@
-.menu {
+/*.menu {
 	background: rgba(255, 255, 255, 0.28);
 	border: 1px solid rgba(255, 255, 255, 0.31);
 }
-
+*/
 .menu-addition {
 	margin-bottom: 20px;
 }
@@ -11,7 +11,11 @@
 
 @media only screen and (max-device-width: 480px) {
 	.menu {
-		background: #4f9951;
+		background: #fff;
 		padding-top: 20px;
+		color: #545454;
+	}
+	.menu h2 {
+		font-weight: 400;
 	}
 }

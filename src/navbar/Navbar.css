@@ -9,6 +9,11 @@
   cursor: pointer;
 }
 
+.navbar-menu__item .link {
+	display: block;
+	
+}
+
 .navbar-menu__item:last-child {
   padding-right: 0; 
 }

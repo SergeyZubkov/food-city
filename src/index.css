@@ -1,6 +1,4 @@
-html, body {
-	height: 100%;	
-}
+
 
 body {
   margin: 0;
@@ -21,5 +19,10 @@ a:active {
 @media only screen and (max-device-width: 480px) {
   body {
   	background-size: cover;
+  }
+  .info {
+    background: #4f9951;
+    margin-bottom: 0;
+    padding-bottom: 20px;
   }
 }

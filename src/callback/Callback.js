@@ -95,6 +95,7 @@ class Callback extends Component {
 						<input 
 							name='amount'
 	          	type="number" 
+	          	min='0'
 	          	value={this.state.amount} 
 	          	onChange={this.handleChangeAmount}
 	          />

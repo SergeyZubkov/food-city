@@ -14,7 +14,7 @@ class DayMenuItem extends Component {
 				<div
 					className='day-menu-item__day'
 				>
-					{"Пн Вт Ср Чт Пт".split(" ")[this.props.day]}
+					{"Понедельник Вторник Среда Четверг Пятница".split(" ")[this.props.day]}
 				</div>
 				<div
 					className='day-menu-item__item'
