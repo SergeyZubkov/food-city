@@ -52,6 +52,14 @@
 
 
 @media only screen and (max-device-width: 480px) {
+	.callback {
+		margin-top: 0px;
+	}
+
+	.callback h2 {
+		font-size: 20px;
+		margin-bottom: 50px;
+	}
 	.callback form {
 	 	width: 100%;
 	 	text-align: center;
@@ -72,4 +80,5 @@
 	.callback input[type='submit'] {
 		margin-top: 40px;
 	}
+
 }

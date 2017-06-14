@@ -1,14 +1,6 @@
 .navbar__menu {
 	overflow: hidden;
-	transition: 0.5s;
-}
-
-.navbar__menu_closed {
-	height:0;
-}
-
-.navbar__menu_opened {
-	height: 164px;
+	transition: 0.5s height;
 }
 
 .navbar-menu__item {
@@ -105,5 +97,12 @@
 	}
 	.navbar-menu__item:last-child .link {
 		display: block;
+	}
+	.navbar__menu_closed {
+		height:0;
+	}
+
+	.navbar__menu_opened {
+		height: 164px;
 	}
 }
