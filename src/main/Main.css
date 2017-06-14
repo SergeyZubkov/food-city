@@ -1,0 +1,10 @@
+
+
+.main p {
+	margin-bottom: 50px;
+	text-align: left;
+}
+
+.main h1 span {
+	text-transform: capitalize;
+}

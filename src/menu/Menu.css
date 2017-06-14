@@ -1,0 +1,17 @@
+.menu {
+	background: rgba(255, 255, 255, 0.11);
+	border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.menu-addition {
+	margin-bottom: 20px;
+}
+
+/* Mobile */
+
+@media only screen and (max-device-width: 480px) {
+	.menu {
+		background: #4f9951;
+		padding-top: 20px;
+	}
+}

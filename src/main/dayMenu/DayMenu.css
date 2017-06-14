@@ -1,7 +1,9 @@
 .day-menu {
-	padding: 10px;
 	margin: 10px;
 	display: inline-block;
+	padding: 30px;
+	background: rgba(255, 255, 255, 0.11);
+	border: 1px solid rgba(255, 255, 255, 0.11);
 }
 
 .day-menu__item {
@@ -13,4 +15,14 @@
 .day-menu__category {
 	font-size: 16px;
 	margin-bottom: -15px;
+}
+
+@media only screen and (max-device-width: 480px) {
+	.day-menu__item {
+		font-size: 24px;
+	}
+	.day-menu__category {
+		font-size: 12px;
+		margin-bottom: -5px;
+	}
 }

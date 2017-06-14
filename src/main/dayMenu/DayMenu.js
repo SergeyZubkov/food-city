@@ -6,7 +6,7 @@ class DayMenu extends Component {
 	render() {
 
 		const menu = this.props.dishs;
-
+		
 		return (
 			<div
 				className='day-menu'

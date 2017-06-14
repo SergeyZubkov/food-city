@@ -2,20 +2,26 @@ import React, { Component } from 'react';
 import './Menu.css';
 import DayMenuItem from './dayMenuItem/DayMenuItem';
 
-import getWeekMenu from '../utils/getWeekMenu.js';
-import getNextWeekMenu from '../utils/getNextWeekMenu.js';
+import getWeekName from '../utils/getWeekName.js';
+import getNextWeekName from '../utils/getNextWeekName.js';
+import menu from '../data/menu.json'
 
 class Menu extends Component {
 	render() {
-		const currentWeek = getWeekMenu();
-		const nextWeek = getNextWeekMenu();
+		const currentWeek = menu[getWeekName()];
+		const nextWeek = menu[getNextWeekName()];
 		return (
-			<div>
+			<div className='menu'>
 				<h1> Меню</h1>
 				<h2> Текущая неделя </h2>
-					{currentWeek.map((d) => <DayMenuItem dishs={d} />)}
+					{currentWeek.map((d, i) => <DayMenuItem key={i} dishs={d} day={i}/>)}
 				<h2> Следующая неделя </h2>
-					{nextWeek.map((d) => <DayMenuItem dishs={d} />)}
+					{nextWeek.map((d, i) => <DayMenuItem key={i} dishs={d} day={i}/>)}
+				<div
+					className='menu-addition'
+				>
+					Дополнительная порция: салата - 30 р., супа - 30 р., горячего - 70 р.
+				</div>
 			</div>
 		);
 	}

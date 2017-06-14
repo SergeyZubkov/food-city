@@ -6,6 +6,7 @@
     "react-scripts": "1.0.0"
   },
   "dependencies": {
+    "nanoajax": "^0.4.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router": "^4.1.1",

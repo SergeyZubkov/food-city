@@ -1,56 +1,56 @@
 {
 	"firstWeek": [
 		{
-			"firstDish": "Столичный",
-			"secondDish": "Рассольник",
-			"thirdDish": "Котлеты с макаронами"
+			"firstDish": "Салат с фасолью",
+			"secondDish": "Щавелевый с яйцом",
+			"thirdDish": "Ленивые голубцы"
 		},
 		{
-			"firstDish": "Крабовый",
+			"firstDish": "Греческий",
+			"secondDish": "С фрикадельками",
+			"thirdDish": "Картофель по-деревенски и свиная отбивная"
+		},
+		{
+			"firstDish": "Цезарь",
+			"secondDish": "Сырный крем-суп с креветками",
+			"thirdDish": "Макароны с куриной котлетой"
+		},
+		{
+			"firstDish": "Летний",
+			"secondDish": "Гороховый с копченостями",
+			"thirdDish": "Рис с курицей в сливочном соусе"
+		},
+		{
+			"firstDish": "Морковка по-корейски",
 			"secondDish": "Борщ",
-			"thirdDish": "Гуляш с гречкой"
-		},
-		{
-			"firstDish": "Морковь по-корейски",
-			"secondDish": "Грибной",
-			"thirdDish": "Рис с тефтелями"
-		},
-		{
-			"firstDish": "Селедка с луком",
-			"secondDish": "Рыбный",
-			"thirdDish": "Пюре с куриной отбивной"
-		},
-		{
-			"firstDish": "Овощной",
-			"secondDish": "Куриный",
-			"thirdDish": "Плов"
+			"thirdDish": "Макароны и Бефстроганов"
 		}
 	],
 	"secondWeek": [
 		{
-			"firstDish": "Оливье",
-			"secondDish": "Бульон с яйцом и гренками",
-			"thirdDish": "Жаркое по-домашнему"
-		},
-		{
-			"firstDish": "Цезарь",
-			"secondDish": "Харчо",
-			"thirdDish": "Гречка с котлетами"
-		},
-		{
-			"firstDish": "Витаминный",
-			"secondDish": "Куриный",
-			"thirdDish": "Пюре с 'Ежиками'"
-		},
-		{
-			"firstDish": "Мимоза",
-			"secondDish": "Рыбный",
-			"thirdDish": "Макаронами по-флотски"
+			"firstDish": "Столичный",
+			"secondDish": "Фасолевый",
+			"thirdDish": "Солянка с мясом"
 		},
 		{
 			"firstDish": "Винегрет",
 			"secondDish": "Щи",
-			"thirdDish": "Рис с Гуляшом"
+			"thirdDish": "Запеканка картофельная с мясом"
+		},
+		{
+			"firstDish": "Овощной",
+			"secondDish": "Окрошка",
+			"thirdDish": "Гречка и гуляш"
+		},
+		{
+			"firstDish": "Селедка с луком",
+			"secondDish": "Куриный",
+			"thirdDish": "Мясо по-французски и пюре"
+		},
+		{
+			"firstDish": "Витаминный",
+			"secondDish": "Грибной",
+			"thirdDish": "Макароны с котлета по-домашнему"
 		}
 	]
 }

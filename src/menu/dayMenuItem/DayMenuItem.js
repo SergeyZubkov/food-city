@@ -12,6 +12,11 @@ class DayMenuItem extends Component {
 				className='day-menu-item'
 			>
 				<div
+					className='day-menu-item__day'
+				>
+					{"Пн Вт Ср Чт Пт".split(" ")[this.props.day]}
+				</div>
+				<div
 					className='day-menu-item__item'
 				>
 					<div

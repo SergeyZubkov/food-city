@@ -1,0 +1,75 @@
+
+.callback {
+	margin-top: 50px;
+	padding: 10px;
+}
+
+.callback h2 {
+	margin-bottom: 50px;
+}
+
+
+.callback label {
+	display: inline-block;
+	width: 30%;
+	margin-bottom: 50px;
+	font-size: 18px;
+}
+
+.callback input {
+	width: 70%;
+	float: right;
+	background: rgba(255, 255, 255, 0.22);
+	border: 1px solid rgba(255, 255, 255, 0.31);
+	height: 34px;
+	vertical-align: middle;
+	color: #f8f8f8;
+	padding: 10px;
+	box-sizing: border-box;
+	font-size: 18px;
+}
+
+.callback input[type='submit'] {
+	width: 100%;
+	text-transform: uppercase;
+	color: #f8f8f8;
+	height: 42px;
+	cursor: pointer;
+	border: 2px solid rgba(255, 255, 255, 0.31);
+	float: none;
+}
+
+.callback form {
+	width: 360px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.callback-after-submit {
+	font-size: 19px;
+	padding-bottom: 70px;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+	.callback form {
+	 	width: 100%;
+	 	text-align: center;
+	 	margin-bottom: 20px;
+	}
+	.callback label {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.callback input {
+		width: 100%;
+		font-weight: none;
+	}
+	.form__line {
+		margin-bottom: 20px;
+		overflow: hidden;
+	}
+	.callback input[type='submit'] {
+		margin-top: 40px;
+	}
+}
