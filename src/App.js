@@ -49,20 +49,20 @@ class App extends Component {
 	render() {
 		return (
 			<Router>
-				<div>
+				<div className='wrapper'>
 					<Header menuDay={this.state.menuDay} />
 					<div
 						className='info'
 						>
-							<p>
-								 Разнообразные, свежие обеды за 200 рублей!
-							</p>
-							<div
-								className='deliver'
-							>
-								<img src={deliver} width='50px' alt='доставка' />
-								Доставка осуществляется <strong>бесплатно</strong>!
-						</div>
+							<div className="info__content">
+									Разнообразные, свежие обеды за 200 рублей!
+								<span
+									className='deliver'
+								>
+									<img src={deliver} width='50px' alt='доставка' />
+									Доставка осуществляется <strong>бесплатно</strong>!
+							</span>
+							</div>
 					</div>
 					<div
 						className='content'

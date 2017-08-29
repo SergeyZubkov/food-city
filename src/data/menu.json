@@ -1,56 +1,56 @@
 {
 	"firstWeek": [
 		{
-			"firstDish": "Салат с фасолью",
-			"secondDish": "Щавелевый с яйцом",
-			"thirdDish": "Ленивые голубцы"
+			"firstDish": "С фасолью",
+			"secondDish": "Гороховый с беконом",
+			"thirdDish": "Ежики"
 		},
 		{
-			"firstDish": "Греческий",
+			"firstDish": "Из редиски с огурцом",
 			"secondDish": "С фрикадельками",
-			"thirdDish": "Картофель по-деревенски и свиная отбивная"
+			"thirdDish": "Котлеты с макаронами"
 		},
 		{
 			"firstDish": "Цезарь",
-			"secondDish": "Сырный крем-суп с креветками",
-			"thirdDish": "Макароны с куриной котлетой"
-		},
-		{
-			"firstDish": "Летний",
-			"secondDish": "Гороховый с копченостями",
-			"thirdDish": "Рис с курицей в сливочном соусе"
-		},
-		{
-			"firstDish": "Морковка по-корейски",
 			"secondDish": "Борщ",
-			"thirdDish": "Макароны и Бефстроганов"
+			"thirdDish": "Азу с отварным картофелем 'по-сельски'"
+		},
+		{
+			"firstDish": "С ветчиной, сыром",
+			"secondDish": "Лагман",
+			"thirdDish": "Гуляш из свинины с гречей"
+		},
+		{
+			"firstDish": "Крабовый",
+			"secondDish": "Солянка",
+			"thirdDish": "Лапша с тушеной курицей"
 		}
 	],
 	"secondWeek": [
 		{
-			"firstDish": "Столичный",
-			"secondDish": "Фасолевый",
-			"thirdDish": "Солянка с мясом"
+			"firstDish": "Нежность",
+			"secondDish": "С говядиной",
+			"thirdDish": "Плов"
 		},
 		{
-			"firstDish": "Винегрет",
-			"secondDish": "Щи",
-			"thirdDish": "Запеканка картофельная с мясом"
+			"firstDish": "Оливье",
+			"secondDish": "Рисовый",
+			"thirdDish": "Жаркое по-домашнему"
+		},
+		{
+			"firstDish": "С морковью и с сыром",
+			"secondDish": "Куриный",
+			"thirdDish": "Макароны 'Болоньезе'"
+		},
+		{
+			"firstDish": "Коул-Слоу",
+			"secondDish": "Минестроне",
+			"thirdDish": "Пюре и мясо по-французски"
 		},
 		{
 			"firstDish": "Овощной",
-			"secondDish": "Окрошка",
-			"thirdDish": "Гречка и гуляш"
-		},
-		{
-			"firstDish": "Селедка с луком",
-			"secondDish": "Куриный",
-			"thirdDish": "Мясо по-французски и пюре"
-		},
-		{
-			"firstDish": "Витаминный",
-			"secondDish": "Грибной",
-			"thirdDish": "Макароны с котлета по-домашнему"
+			"secondDish": "Харчо",
+			"thirdDish": "Паста 'Карбонара'"
 		}
 	]
 }

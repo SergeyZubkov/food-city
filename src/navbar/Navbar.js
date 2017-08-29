@@ -42,7 +42,7 @@ class Navbar extends Component {
 		}
 		return (
 			<div 
-				className="navbar"
+				className={`navbar ${this.state.isOpen ? 'is-open': ''}`}
 				onClick={this.handleClick}
 			>
 				<div

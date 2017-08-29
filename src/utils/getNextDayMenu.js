@@ -9,8 +9,8 @@ function getNextDayMenu() {
 	let week = getWeekName();
 	let dayMenu;
 
-	if ([0,6].indexOf(dayWeek) !== -1) {
-	// если текущий день воскресенье или суббота, то
+	if ([0, 6, 1].indexOf(dayWeek) !== -1) {
+	// если следующий день суббота, воскресенье или понедельник, то
 	// возвращать меню на понедельник следующей недели
 		dayWeek = 0;
 		week = getNextWeekName();

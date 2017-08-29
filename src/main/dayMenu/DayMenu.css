@@ -8,18 +8,19 @@
 
 .day-menu__item {
 	font-size: 44px;
-	margin-bottom: 30px;
+	margin-bottom: 45px;
 	font-weight: 300;
 }
 
 .day-menu__category {
-	font-size: 16px;
-	margin-bottom: -15px;
+	font-size: 18px;
+	margin-bottom: 0px;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 480px) {
 	.day-menu__item {
 		font-size: 24px;
+		margin-bottom: 35px;
 	}
 	.day-menu__category {
 		font-size: 12px;

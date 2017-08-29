@@ -16,6 +16,7 @@
   display: flex;
   justify-content: space-between;
   height: 100%;
+  padding: 0 15px;
 }
 
 .header__phone {
@@ -48,7 +49,7 @@
   line-height: 77px;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 480px) {
   .header__content {
     padding: 10px;
     /*justify-content: initial;*/

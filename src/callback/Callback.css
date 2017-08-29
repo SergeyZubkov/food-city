@@ -1,6 +1,5 @@
 
 .callback {
-	margin-top: 50px;
 	background: #fff;
 	color: #545454;
 	max-width: 420px;
@@ -71,14 +70,32 @@
 }
 
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 480px) {
 	.callback {
-		margin-top: 0px;
+		display: block;
+		max-width: 100%;
+		margin: 0;
 	}
 
 	.callback h2 {
 		font-size: 20px;
-		background: #94d295;
+		background: #fff;
+		border: 1px solid #efefef;
+		position: relative;
+		color: #555;
+	}
+	.callback h2:after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 0;
+		height: 12px;
+		width: 24px;
+		left: 50%;
+		transform: translate(-50%, 60%);
+		background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZGF0YS1uYW1lPSJMaXZlbGxvIDEiIGlkPSJMaXZlbGxvXzEiIHZpZXdCb3g9IjAgMCAzOCAyMC41NyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6bm9uZTtzdHJva2U6IzRmOTk1MTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLXdpZHRoOjRweDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlLz48cG9seWxpbmUgY2xhc3M9ImNscy0xIiBwb2ludHM9IjIgMi4wMyAxOC44NiAxOC41NyAzNiAyIi8+PC9zdmc+);
+		background-repeat: no-repeat;
+		color: blue;
 	}
 	.callback form {
 	 	width: 100%;
