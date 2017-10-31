@@ -1,13 +1,13 @@
 {
 	"firstWeek": [
 		{
-			"firstDish": "С фасолью",
+			"firstDish": "Красное море",
 			"secondDish": "Гороховый с беконом",
 			"thirdDish": "Ежики"
 		},
 		{
 			"firstDish": "Из редиски с огурцом",
-			"secondDish": "С фрикадельками",
+			"secondDish": "Куриный",
 			"thirdDish": "Котлеты с макаронами"
 		},
 		{
@@ -16,13 +16,13 @@
 			"thirdDish": "Азу с отварным картофелем 'по-сельски'"
 		},
 		{
-			"firstDish": "С ветчиной, сыром",
+			"firstDish": "С ветчиной и сыром",
 			"secondDish": "Лагман",
 			"thirdDish": "Гуляш из свинины с гречей"
 		},
 		{
 			"firstDish": "Крабовый",
-			"secondDish": "Солянка",
+			"secondDish": "Овощной",
 			"thirdDish": "Лапша с тушеной курицей"
 		}
 	],
@@ -34,12 +34,12 @@
 		},
 		{
 			"firstDish": "Оливье",
-			"secondDish": "Рисовый",
+			"secondDish": "Куриный с рисом",
 			"thirdDish": "Жаркое по-домашнему"
 		},
 		{
-			"firstDish": "С морковью и с сыром",
-			"secondDish": "Куриный",
+			"firstDish": "Морковь по-корейски",
+			"secondDish": "С фрикадельками",
 			"thirdDish": "Макароны 'Болоньезе'"
 		},
 		{

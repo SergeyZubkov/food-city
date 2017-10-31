@@ -6,16 +6,13 @@ class DayMenuItem extends Component {
 	render() {
 
 		const menu = this.props.dishs;
+		const day = this.props.day;
 
-		return (
+		return menu ? (
 			<div
 				className='day-menu-item'
 			>
-				<div
-					className='day-menu-item__day'
-				>
-					{"Понедельник Вторник Среда Четверг Пятница".split(" ")[this.props.day]}
-				</div>
+				<div className='day-menu-item__day'>{day}</div>
 				<div
 					className='day-menu-item__item'
 				>
@@ -24,7 +21,7 @@ class DayMenuItem extends Component {
 					>
 						Салат
 					</div>
-					{menu.firstDish}
+					{menu.salad}
 				</div>
 								<div
 					className='day-menu-item__item'
@@ -34,9 +31,9 @@ class DayMenuItem extends Component {
 					>
 						Суп
 					</div>
-					{menu.secondDish}
+					{menu.soup}
 				</div>
-								<div
+				<div
 					className='day-menu-item__item'
 				>
 					<div
@@ -44,10 +41,23 @@ class DayMenuItem extends Component {
 					>
 						Горячее
 					</div>
-					{menu.thirdDish}
+					{menu.hotter}
 				</div>
+				{menu.sidedish&&<div
+					className='day-menu-item__item'
+				>
+					<div
+						className='day-menu-item__category'
+					>
+						Гарнир
+					</div>
+					{menu.sidedish}
+				</div>}
 			</div>
-		);
+		)
+		: <div className='day-menu-item'>
+				<div className='day-menu-item__day day-menu-item__day_inactive'> {day} </div>
+		 </div>
 	}
 }
 

@@ -1,25 +1,30 @@
 .day-menu-item {
-	padding: 4px;
+	padding: 15px;
 	margin: 4px;
 	display: inline-block;
 	font-size: 15px;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	font-weight: 700;
 	width: 19%;
-  height: 250px;
+  height: 300px;
 	box-sizing: border-box;
 	vertical-align: top;
   background: rgba(255, 255, 255, 0.28);
   border: 1px solid rgba(255, 255, 255, 0.31);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.32);
+  position: relative;
 }
 
 .day-menu-item__day {
-	border-bottom: 1px solid #fff;
-	margin-bottom: 10px;
-	font-weight: 700 ;
-  padding-bottom: 5px;
+  font-size: 35px;
+  position: absolute;
+  top: -20px;
+  left: -5px;
 }
 
+.day-menu-item__day_inactive {
+  color: rgba(255, 255, 255, 0.55);
+}
 
 .day-menu-item__item {
 	margin-bottom: 10px;

@@ -6,6 +6,7 @@
     "react-scripts": "1.0.0"
   },
   "dependencies": {
+    "js-calendar": "^1.2.2",
     "nanoajax": "^0.4.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",

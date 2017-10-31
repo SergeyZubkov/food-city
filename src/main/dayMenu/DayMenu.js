@@ -6,7 +6,7 @@ class DayMenu extends Component {
 	render() {
 
 		const menu = this.props.dishs;
-		
+		console.log(menu)
 		return (
 			<div
 				className='day-menu'
@@ -19,7 +19,7 @@ class DayMenu extends Component {
 					>
 						Салат
 					</div>
-					{menu.firstDish}
+					{menu.salad}
 				</div>
 								<div
 					className='day-menu__item'
@@ -29,9 +29,9 @@ class DayMenu extends Component {
 					>
 						Суп
 					</div>
-					{menu.secondDish}
+					{menu.soup}
 				</div>
-								<div
+				<div
 					className='day-menu__item'
 				>
 					<div
@@ -39,8 +39,18 @@ class DayMenu extends Component {
 					>
 						Горячее
 					</div>
-					{menu.thirdDish}
+					{menu.hotter}
 				</div>
+				{menu.sidedish&&<div
+					className='day-menu__item'
+				>
+					<div
+						className='day-menu__category'
+					>
+						Гарнир
+					</div>
+					{menu.sidedish}
+				</div>}
 			</div>
 		);
 	}

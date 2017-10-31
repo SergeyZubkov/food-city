@@ -37,13 +37,17 @@ class App extends Component {
 				menu: getDayMenu(),
 				menuDay: 'сегодня'
 			});
-			setTimeout(() => this.setMenu(), msToToggleMenuOnNextDay);
+			this.toggleMenuTimer = setTimeout(() => this.setMenu(), msToToggleMenuOnNextDay);
 		} else {
 			this.setState({
 				menu: getNextDayMenu(),
 				menuDay: 'завтра'
 			});
 		}
+	}
+
+	componentDidMount() {
+		clearTimeout(this.toggleMenuTimer);
 	}
 
 	render() {

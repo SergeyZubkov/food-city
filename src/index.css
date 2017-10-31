@@ -5,7 +5,7 @@ body {
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   color: #fff;
-  background: #4F9951 url('bg.jpg') no-repeat;
+  background: #4F9951 url('bg.jpg') no-repeat fixed;
 }
 
 .link {
@@ -80,7 +80,7 @@ a:active {
   .day-menu-item {
     margin-bottom: 0;
     border: 1px solid #efefef;
-    height: 200px;
+    height: 250px;
   }
   .day-menu-item__day {
     font-size: 9pt;

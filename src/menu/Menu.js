@@ -4,17 +4,26 @@ import DayMenuItem from './dayMenuItem/DayMenuItem';
 
 import getWeekName from '../utils/getWeekName.js';
 import getNextWeekName from '../utils/getNextWeekName.js';
-import menu from '../data/menu.json'
+import menu from '../data/menu-november.json'
 import whatsapp from '../whatsapp.png';
+
+import jsCalendar from 'js-calendar';
+
 
 class Menu extends Component {
 	render() {
-		const currentWeek = menu[getWeekName()];
-		const nextWeek = menu[getNextWeekName()];
+		const generator = new jsCalendar.Generator({language: 'ru'})
+		let november = generator(2017, 10)
+		november = november.cells
+		.filter(item => item.date)
+		.filter(item => [1, 2, 3, 4, 5].indexOf(new Date(item.date).getDay()) > -1)
+		.filter(item => new Date(item.date).getMonth() === 10)
+		.map(item => new Date(item.date).getDate());
+		console.log(november)
 		return (
 			<div className='menu'>
 				<h1> 
-					Меню
+					Меню на ноябрь
 					<div className="phone-print">
 						<span
 						>
@@ -36,14 +45,17 @@ class Menu extends Component {
 						Распечатать
 					</div>
 				</h1>
-				<div className="current-week">
-					<h2> Текущая неделя </h2>
-					{currentWeek.map((d, i) => <DayMenuItem key={i} dishs={d} day={i}/>)}
-				</div>
-				<div className="next-week">
-					<h2> Следующая неделя </h2>
-					{nextWeek.map((d, i) => <DayMenuItem key={i} dishs={d} day={i}/>)}
-				</div>
+					<div
+						className='menu-flex'
+					>
+						<DayMenuItem key='30o' day="30"/>
+						<DayMenuItem key='31o' day='31'/>
+						{november.map((day, i) => {
+
+							const menuOfDay = menu.find(item => item.day == day)
+							return <DayMenuItem key={i} dishs={menuOfDay} day={day} /> })}
+						<DayMenuItem key='1d' day='1'/>
+					</div>
 				<div
 					className='menu-addition'
 				>

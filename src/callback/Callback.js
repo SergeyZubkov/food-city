@@ -10,7 +10,7 @@ class Callback extends Component {
     	name: '',
     	phone: '',
     	amount: '',
-    	address: '',
+    	addressDeliver: '',
     	error: false,
     	submit: false,
     };
@@ -36,26 +36,39 @@ class Callback extends Component {
   }
 
   handleChangeAddress(event) {
-    this.setState({address: event.target.value});
+    this.setState({addressDeliver: event.target.value});
   }
 
   handleSubmit(event) {
-  	if (this.state.name&&this.state.phone&&this.state.address&&this.state.amount) {
+  	if (this.state.name&&this.state.phone&&this.state.addressDeliver&&this.state.amount) {
   		this.setState({error: false, submit: true});
   		this.sendForm();
   	} else {
   		this.setState({error: true});
   	}
+
     event.preventDefault();
   }
 
   sendForm() {
-  	const t = this;
+  	const {
+  		name,
+  		phone,
+  		amount,
+  		addressDeliver
+  	} = this.state;
+
   	nanoajax.ajax({
   		url: 'mail.php', 
   		method: 'POST', 
-  		body: serialize(t.state)
+  		body: serialize({
+  			name,
+  			phone,
+  			amount,
+  			addressDeliver
+  		})
   	})
+
   }
 
 	render() {
@@ -105,9 +118,9 @@ class Callback extends Component {
 					>
 						<label htmlFor='address'>Адрес:</label>
 						<input 
-							name='address'
+							name='addressDeliver'
 	          	type="text" 
-	          	value={this.state.address} 
+	          	value={this.state.addressDeliver} 
 	          	onChange={this.handleChangeAddress}
 	          />
 					</div>

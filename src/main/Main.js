@@ -9,7 +9,7 @@ class Main extends Component {
 	render() {
 		return (
 			<div className="main">
-				<h1> <span>  {this.props.menuDay} </span> в меню: </h1>
+				<h1> <span>  {this.props.menuDay} </span> в меню </h1>
 				<DayMenu dishs={this.props.menu} />
 			</div>
 		);
