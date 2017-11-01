@@ -12,7 +12,7 @@ import Callback from './callback/Callback';
 import getMsToToggleMenuOnNextDay from './utils/getMsToToggleMenuOnNextDay';
 import getDayMenu from './utils/getDayMenu';
 import getNextDayMenu from './utils/getNextDayMenu';
-
+import getMenuDay from './utils/getMenuDay';
 
 class App extends Component {
 
@@ -30,18 +30,20 @@ class App extends Component {
 	}
 
 	setMenu() {
-		const msToToggleMenuOnNextDay = getMsToToggleMenuOnNextDay();
+		const timeOfNextDay = getMsToToggleMenuOnNextDay();
 
-		if(msToToggleMenuOnNextDay > 0) {
+		if(timeOfNextDay > 0) {
+			let menu = getDayMenu();
 			this.setState({
-				menu: getDayMenu(),
-				menuDay: 'сегодня'
+				menu: menu,
+				menuDay: getMenuDay(menu)
 			});
-			this.toggleMenuTimer = setTimeout(() => this.setMenu(), msToToggleMenuOnNextDay);
+			this.toggleMenuTimer = setTimeout(() => this.setMenu(), timeOfNextDay);
 		} else {
+			let menu = getNextDayMenu();
 			this.setState({
-				menu: getNextDayMenu(),
-				menuDay: 'завтра'
+				menu: menu,
+				menuDay: getMenuDay(menu)
 			});
 		}
 	}
@@ -64,7 +66,8 @@ class App extends Component {
 									className='deliver'
 								>
 									<img src={deliver} width='50px' alt='доставка' />
-									Доставка осуществляется <strong>бесплатно</strong>!
+									Доставка по <b>СЗАО</b> осуществляется <strong>бесплатно</strong>!<br/>
+									В другие округа стоимость доставки составляет 390 рублей.
 							</span>
 							</div>
 					</div>

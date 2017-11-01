@@ -70,6 +70,9 @@ a:active {
     font-size: 12pt;
     margin: 5px 0 10px;
   }
+  .menu {
+    padding-top: 30px;
+  }
   .menu h1 {
     font-size: 14pt;
     margin-bottom: 23px;
@@ -78,13 +81,17 @@ a:active {
     padding-bottom: 13px;
   }
   .day-menu-item {
-    margin-bottom: 0;
+    margin-bottom: 15px;
     border: 1px solid #efefef;
     height: 250px;
+    box-shadow: none;
+  }
+  .day-menu-item:nth-child(20) {
+    margin-bottom: 220px;
   }
   .day-menu-item__day {
     font-size: 9pt;
-    border-bottom: 1px solid #999;
+    border-bottom: none;
   }
   .day-menu-item__category {
     font-size: 8pt ;

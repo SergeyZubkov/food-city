@@ -17,9 +17,10 @@ class Menu extends Component {
 		november = november.cells
 		.filter(item => item.date)
 		.filter(item => [1, 2, 3, 4, 5].indexOf(new Date(item.date).getDay()) > -1)
-		.filter(item => new Date(item.date).getMonth() === 10)
-		.map(item => new Date(item.date).getDate());
-		console.log(november)
+		.map(item => new Date(item.date));
+
+		november = november.slice(0, -5)
+
 		return (
 			<div className='menu'>
 				<h1> 
@@ -46,21 +47,18 @@ class Menu extends Component {
 					</div>
 				</h1>
 					<div
-						className='menu-flex'
+						className='menu-container'
 					>
-						<DayMenuItem key='30o' day="30"/>
-						<DayMenuItem key='31o' day='31'/>
-						{november.map((day, i) => {
-
-							const menuOfDay = menu.find(item => item.day == day)
-							return <DayMenuItem key={i} dishs={menuOfDay} day={day} /> })}
-						<DayMenuItem key='1d' day='1'/>
+						{november.map((date, i) => {
+							console.log(date.getMonth())
+							if (date.getMonth() !==  10) {
+								return <DayMenuItem key={i} day={date.getDate()} />
+							} else {
+								const menuOfDay = menu.find(item => item.day == date.getDate())
+								return <DayMenuItem key={i} dishs={menuOfDay} day={date.getDate()} /> 					
+							}
+						})}
 					</div>
-				<div
-					className='menu-addition'
-				>
-					Дополнительная порция: салата - 30 р., супа - 30 р., горячего - 70 р.
-				</div>
 			</div>
 		);
 	}

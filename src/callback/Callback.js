@@ -67,8 +67,8 @@ class Callback extends Component {
   			amount,
   			addressDeliver
   		})
-  	})
-
+  	}, () => null)
+  	console.log({name, phone, amount, addressDeliver})
   }
 
 	render() {

@@ -31,8 +31,7 @@ import menu from '../data/menu-november.json';
 
 function getDayMenu() {
 	const day = new Date().getDate() + 1
-	console.log()
-	return menu.find((menuItem) => menuItem.day >= 1)
+	return menu.find((menuItem) => menuItem.day >= day)
 }
 
 export default getDayMenu;

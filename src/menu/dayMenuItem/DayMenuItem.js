@@ -55,8 +55,8 @@ class DayMenuItem extends Component {
 				</div>}
 			</div>
 		)
-		: <div className='day-menu-item'>
-				<div className='day-menu-item__day day-menu-item__day_inactive'> {day} </div>
+		: <div className='day-menu-item day-menu-item_inactive'>
+				<div className='day-menu-item__day'> {day} </div>
 		 </div>
 	}
 }

@@ -13,7 +13,7 @@ const menu = [
 		path: '/menu'
 	},
 	{
-		title: 'Текущее меню',
+		title: 'Меню дня',
 		path: '/main'
 	},
 	{

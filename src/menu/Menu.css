@@ -1,11 +1,8 @@
-/*.menu {
-	background: rgba(255, 255, 255, 0.28);
-	border: 1px solid rgba(255, 255, 255, 0.31);
+.menu {
+	padding-bottom: 15px;
+	font-size: 14px;
 }
-*/
-.menu-addition {
-	padding: 0 0 20px;
-}
+
 
 .phone-print {
 	display: none;
@@ -30,7 +27,7 @@
 	cursor: pointer;
 }
 
-.menu-flex {
+.menu-container {
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -54,6 +51,15 @@
 		margin-top: 0;
 	}
 	.btn.btn-second {
+		display: none;
+	}
+	.menu-container {
+		display: block;
+	}
+	.day-menu-item:nth-child(1),
+	.day-menu-item:nth-child(2),
+	.day-menu-item:nth-child(6),
+	.day-menu-item:last-child {
 		display: none;
 	}
 }

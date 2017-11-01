@@ -4,6 +4,7 @@ function getMsToToggleMenuOnNextDay() {
 		const d = new Date();
 		const currentTime = d.getTime();
 		const nextDayMenuTime = new Date(d.getFullYear(), d.getMonth(), d.getDate(), addHours).getTime();
+
 		const diff = nextDayMenuTime - currentTime;
 
 		return diff;
