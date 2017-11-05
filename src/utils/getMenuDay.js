@@ -11,7 +11,7 @@ const getMenuDay = (menu) => {
 		'Четверг', 
 		'Пятницу', 
 		'Субботу'
-	][new Date(today.getFullYear(), today.getMonth(), menu.day).getDay()].toLowerCase();
+	][new Date(today.getFullYear(), today.getMonth(), menu.day).getDay()];
 }
 
 export default getMenuDay;

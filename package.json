@@ -9,6 +9,7 @@
     "js-calendar": "^1.2.2",
     "nanoajax": "^0.4.3",
     "react": "^15.5.4",
+    "react-count-to": "^0.8.1",
     "react-dom": "^15.5.4",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1"

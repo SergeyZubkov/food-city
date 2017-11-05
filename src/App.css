@@ -85,7 +85,6 @@
   .info__content {
     flex-direction: column;
     line-height: 1.1;
-    padding: 0 15px;
     text-align: center;
   }
 }
@@ -109,7 +108,7 @@
     position: relative;
     margin-top: 15px;
     padding-left: 60px;
-    line-height:  1.1;
+    line-height:  1.3;
   }
   .deliver img {
     position: absolute;

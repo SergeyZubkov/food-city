@@ -1,0 +1,30 @@
+.counters-line {
+	display: flex;
+	padding: 15px 0;
+}
+
+.counters-line__item {
+	flex-grow: 1;
+	background: rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.31);
+}
+
+.counters-line__item-title {
+	padding: 10px;
+}
+
+.counters-line__item-counter {
+	font-size: 26px;
+	display: inline-block;
+	padding-top: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+	.counters-line__item-counter {
+		font-size: 16px;
+	}
+	.counters-line__item-title {
+		font-size: 12px;
+		padding: 5px;
+	}
+}

@@ -36,14 +36,14 @@ class App extends Component {
 			let menu = getDayMenu();
 			this.setState({
 				menu: menu,
-				menuDay: getMenuDay(menu)
+				menuDay: getMenuDay(menu).toLowerCase()
 			});
 			this.toggleMenuTimer = setTimeout(() => this.setMenu(), timeOfNextDay);
 		} else {
 			let menu = getNextDayMenu();
 			this.setState({
 				menu: menu,
-				menuDay: getMenuDay(menu)
+				menuDay: getMenuDay(menu).toLowerCase()
 			});
 		}
 	}
