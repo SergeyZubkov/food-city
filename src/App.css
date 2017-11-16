@@ -18,15 +18,25 @@
 }
 
 .info__content {
+  padding: 10px 0 0px 10px;
   margin: 0 auto;
   max-width: 960px;
-  display: flex;
-  justify-content: space-between;
-  line-height: 50px;
+  line-height: 1.1;
+  font-size: 20px;
+}
+
+.info__message {
+  padding-left: 60px;
 }
 
 .info p {
   margin: 0;
+}
+
+.asterisk {
+  font-size: 12px;
+  padding-left: 60px;
+  margin-top: -20px;
 }
 
 .link {
@@ -94,6 +104,7 @@
 @media only screen and (max-width: 480px) {
   .info__content {
     text-align: left;
+    font-size: 14px;
   }
   .content {
     padding: 0;

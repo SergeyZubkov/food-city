@@ -14,6 +14,8 @@ import getDayMenu from './utils/getDayMenu';
 import getNextDayMenu from './utils/getNextDayMenu';
 import getMenuDay from './utils/getMenuDay';
 
+import menuDataService from './utils/menuDataService';
+
 class App extends Component {
 
 	constructor(props) {
@@ -30,8 +32,8 @@ class App extends Component {
 	}
 
 	setMenu() {
-		const timeOfNextDay = getMsToToggleMenuOnNextDay();
-
+		const timeOfNextDay = menuDataService.getMsToToggleMenuOnNextDay();
+		console.log(timeOfNextDay);
 		if(timeOfNextDay > 0) {
 			let menu = getDayMenu();
 			this.setState({
@@ -53,6 +55,7 @@ class App extends Component {
 	}
 
 	render() {
+
 		return (
 			<Router>
 				<div className='wrapper'>
@@ -61,14 +64,13 @@ class App extends Component {
 						className='info'
 						>
 							<div className="info__content">
-									Разнообразные, свежие обеды за 200 рублей!
-								<span
+								<div className="info__message">Разнообразные, свежие обеды за <b>200 рублей!</b></div>
+								<div
 									className='deliver'
 								>
 									<img src={deliver} width='50px' alt='доставка' />
-									Доставка по <b>СЗАО</b> осуществляется <strong>бесплатно</strong>!<br/>
-									В другие округа стоимость доставки составляет 390 рублей.
-							</span>
+									*Доставка по москве <b>бесплатно</b>!
+							</div>
 							</div>
 					</div>
 					<div

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './Menu.css';
 import DayMenuItem from './dayMenuItem/DayMenuItem';
 
-import getWeekName from '../utils/getWeekName.js';
-import getNextWeekName from '../utils/getNextWeekName.js';
 import menu from '../data/menu-november.json'
 import whatsapp from '../whatsapp.png';
 

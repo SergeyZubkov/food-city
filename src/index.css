@@ -57,6 +57,9 @@ a:active {
     size: landscape;
     font-size: 12pt;
   }
+  .info__message {
+    padding: 0;
+  }
   .info .deliver img{
     display: none;
   }
@@ -71,7 +74,7 @@ a:active {
     margin: 5px 0 10px;
   }
   .menu {
-    padding-top: 30px;
+    padding-top: 25px;
   }
   .menu h1 {
     font-size: 14pt;
