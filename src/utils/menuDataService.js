@@ -1,4 +1,4 @@
-import m from '../data/menu-november.json';
+import m from '../data/menu-december.json';
 import changeQuotesType from './changeQuotesType';
 
 const menu = m.map(menuOfDay => {

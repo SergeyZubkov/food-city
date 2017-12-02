@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Menu.css';
 import DayMenuItem from './dayMenuItem/DayMenuItem';
 
-import menu from '../data/menu-november.json'
+import menu from '../data/menu-december.json'
 import whatsapp from '../whatsapp.png';
 
 import jsCalendar from 'js-calendar';
@@ -11,7 +11,7 @@ import jsCalendar from 'js-calendar';
 class Menu extends Component {
 	render() {
 		const generator = new jsCalendar.Generator({language: 'ru'})
-		let november = generator(2017, 10)
+		let november = generator(2017, 11)
 		november = november.cells
 		.filter(item => item.date)
 		.filter(item => [1, 2, 3, 4, 5].indexOf(new Date(item.date).getDay()) > -1)
@@ -22,7 +22,7 @@ class Menu extends Component {
 		return (
 			<div className='menu'>
 				<h1> 
-					Меню на ноябрь
+					Меню на декабрь
 					<div className="phone-print">
 						<span
 						>
@@ -49,7 +49,7 @@ class Menu extends Component {
 					>
 						{november.map((date, i) => {
 							console.log(date.getMonth())
-							if (date.getMonth() !==  10) {
+							if (date.getMonth() !==  11) {
 								return <DayMenuItem key={i} day={date.getDate()} />
 							} else {
 								const menuOfDay = menu.find(item => item.day == date.getDate())
