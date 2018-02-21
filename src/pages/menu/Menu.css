@@ -56,10 +56,4 @@
 	.menu-container {
 		display: block;
 	}
-	.day-menu-item:nth-child(1),
-	.day-menu-item:nth-child(2),
-	.day-menu-item:nth-child(6),
-	.day-menu-item:last-child {
-		display: none;
-	}
 }

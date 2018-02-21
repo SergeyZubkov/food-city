@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import deliver from './delivery.png';
 import './App.css'
 
 import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
 
-import Header from './header/Header';
-import Main from './main/Main';
-import Menu from './menu/Menu';
-import Callback from './callback/Callback';
+import Header from './commons/header/Header';
+import Main from './pages/main/Main';
+import Menu from './pages/menu/Menu';
+import Callback from './pages/callback/Callback';
+import Subheader from './commons/subheader/Subheader';
+import DeliveryZone from './pages/deliveryZone/DeliveryZone';
 
 import getMsToToggleMenuOnNextDay from './utils/getMsToToggleMenuOnNextDay';
 import getDayMenu from './utils/getDayMenu';
@@ -60,25 +61,14 @@ class App extends Component {
 			<Router>
 				<div className='wrapper'>
 					<Header menuDay={this.state.menuDay} />
-					<div
-						className='info'
-						>
-							<div className="info__content">
-								<div className="info__message">Разнообразные, свежие обеды за <b>200 рублей!</b></div>
-								<div
-									className='deliver'
-								>
-									<img src={deliver} width='50px' alt='доставка' />
-									*Доставка по москве <b>бесплатно</b>!
-							</div>
-							</div>
-					</div>
+					<Subheader />
 					<div
 						className='content'
 					>
 						<Route exact path="/main" render={props => <Main menu={this.state.menu} menuDay={this.state.menuDay}/>}/>
 						<Route path="/menu" component={Menu}/>
 						<Route path="/callback" component={Callback}/>
+						<Route path="/delivery-zone" component={DeliveryZone}/>
 						<Redirect to='/main' />
 					</div>
 				</div>

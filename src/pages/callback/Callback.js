@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Callback.css';
-import serialize from '../utils/serialize';
+import serialize from '../../utils/serialize';
 import nanoajax from "nanoajax"
 
 class Callback extends Component {

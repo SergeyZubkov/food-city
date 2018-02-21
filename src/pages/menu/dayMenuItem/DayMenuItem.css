@@ -56,4 +56,7 @@
   .next-week .day-menu-item {
   	color: #929292;
   }
+  .day-menu-item.day-menu-item_inactive {
+    display: none;
+  }
 }

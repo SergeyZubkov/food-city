@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './Header.css';
 
-import whatsapp from '../whatsapp.png';
-import logo from '../food-city-logo.svg';
+import whatsapp from '../../whatsapp.png';
+import logo from '../../food-city-logo.svg';
 
 import {NavLink, Link} from 'react-router-dom';
 import Navbar from '../navbar/Navbar';

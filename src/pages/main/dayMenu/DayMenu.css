@@ -27,8 +27,8 @@
 }
 
 .day-menu__item {
-	font-size: 44px;
-	margin-bottom: 45px;
+	font-size: 54px;
+	margin-bottom: 35px;
 	font-weight: 300;
 	text-shadow: 0 1px 10px #000
 }
@@ -64,7 +64,7 @@
 	}
 	.day-menu__item {
 		font-size: 24px;
-		margin-bottom: 35px;
+		margin-bottom: 20px;
 	}
 	.day-menu__category {
 		font-size: 12px;

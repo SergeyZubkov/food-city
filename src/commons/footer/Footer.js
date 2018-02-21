@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import './Footer.css';
 
-import mailIcon from '../mail.jpg';
+import mailIcon from '../../mail.jpg';
 
 class Footer extends Component {
 

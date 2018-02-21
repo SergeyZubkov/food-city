@@ -2,27 +2,44 @@ import React, { Component } from 'react';
 import './Menu.css';
 import DayMenuItem from './dayMenuItem/DayMenuItem';
 
-import menu from '../data/menu-december.json'
-import whatsapp from '../whatsapp.png';
+import menu from '../../data/menu.json'
+import whatsapp from '../../whatsapp.png';
 
 import jsCalendar from 'js-calendar';
 
 
 class Menu extends Component {
 	render() {
-		const generator = new jsCalendar.Generator({language: 'ru'})
-		let november = generator(2017, 11)
-		november = november.cells
+		const t = new Date();
+		const currentYear = t.getFullYear()
+		const currentMonth = t.getMonth();
+		const currentMonthName = [
+		 'январь',
+	   'февраль',
+	   'март',
+	   'апрель',
+	   'май',
+	   'июнь',
+	   'июль',
+	   'август',
+	   'сентябрь',
+	   'ноябрь',
+	   'декабрь',
+		][currentMonth];
+		const generator = new jsCalendar.Generator({language: 'ru'});
+		let currentMonthCells = generator(currentYear, currentMonth);
+
+		currentMonthCells = currentMonthCells.cells
 		.filter(item => item.date)
 		.filter(item => [1, 2, 3, 4, 5].indexOf(new Date(item.date).getDay()) > -1)
 		.map(item => new Date(item.date));
 
-		november = november.slice(0, -5)
+		currentMonthCells = currentMonthCells.slice(0, -5)
 
 		return (
 			<div className='menu'>
 				<h1> 
-					Меню на декабрь
+					Меню на {currentMonthName}
 					<div className="phone-print">
 						<span
 						>
@@ -47,9 +64,9 @@ class Menu extends Component {
 					<div
 						className='menu-container'
 					>
-						{november.map((date, i) => {
+						{currentMonthCells.map((date, i) => {
 							console.log(date.getMonth())
-							if (date.getMonth() !==  11) {
+							if (date.getMonth() !==  currentMonth) {
 								return <DayMenuItem key={i} day={date.getDate()} />
 							} else {
 								const menuOfDay = menu.find(item => item.day == date.getDate())

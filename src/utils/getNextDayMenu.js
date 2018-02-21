@@ -1,4 +1,4 @@
-import menu from '../data/menu-december.json';
+import menu from '../data/menu.json';
 
 
 function getDayMenu() {
