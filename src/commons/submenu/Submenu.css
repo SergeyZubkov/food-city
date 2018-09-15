@@ -1,0 +1,43 @@
+.submenu {
+	display: inline-block;
+	margin: 0 auto 20px;
+	padding: 15px 25px;
+	background: rgba(255, 255, 255, 0.28);
+	border: 1px solid rgba(255, 255, 255, .31);
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, .32);
+	width: 600px;
+}
+
+.submenu-header {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.submenu-category {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.submenu-category-title {
+	font-size: 17px;
+	margin-bottom: 4px;
+}
+
+.submenu-category-item {
+	font-size: 14px;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+@media only screen and (max-width: 710px)  {
+	.submenu {
+		width: 400px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.submenu {
+		width: 270px;
+	}
+}

@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './Menu.css';
+
 import DayMenuItem from './dayMenuItem/DayMenuItem';
+import Submenu from '../../commons/submenu/Submenu.js';
+import AsteriksMenu from '../../commons/asteriksMenu/AsteriksMenu.js';
+
 
 import menu from '../../data/menu.json'
 import whatsapp from '../../whatsapp.png';
@@ -13,11 +17,12 @@ class Menu extends Component {
 		const t = new Date();
 		const currentYear = t.getFullYear()
 		const currentMonth = t.getMonth();
+
 		const currentMonthName = [
 		 'январь',
 	   'февраль',
 	   'март',
-	   'апрель',
+	   'апрель', 
 	   'май',
 	   'июнь',
 	   'июль',
@@ -31,11 +36,15 @@ class Menu extends Component {
 
 		currentMonthCells = currentMonthCells.cells
 		.filter(item => item.date)
-		.filter(item => [1, 2, 3, 4, 5].indexOf(new Date(item.date).getDay()) > -1)
 		.map(item => new Date(item.date));
-
-		currentMonthCells = currentMonthCells.slice(0, -5)
-
+		// первая неделя текущего месяца дополняется числами из предыдущего месяца, а
+		// последняя неделя - числами из следующего месяца. Иногда, если месяц начинается 
+		// или кончается в субботу или воскресенья, нужно обрезать первую неделю или последнию
+		// месяца
+		// есть еще проблемы связанные с переходом меню на другой месяц, когда текующий месяц еще
+		// не кончился, а число выпло на выходной и надо показать меню на следующего дня, который
+		// уже приходится на другой месяц.
+		console.log(currentMonth)
 		return (
 			<div className='menu'>
 				<h1> 
@@ -61,19 +70,19 @@ class Menu extends Component {
 						Распечатать
 					</div>
 				</h1>
+					<AsteriksMenu />
 					<div
 						className='menu-container'
 					>
 						{currentMonthCells.map((date, i) => {
-							console.log(date.getMonth())
-							if (date.getMonth() !==  currentMonth) {
-								return <DayMenuItem key={i} day={date.getDate()} />
-							} else {
-								const menuOfDay = menu.find(item => item.day == date.getDate())
+							let menuOfDay = menu.find(item => item.day === date.getDate());							
+							
+							if (menuOfDay&&date.getMonth() === currentMonth) {
 								return <DayMenuItem key={i} dishs={menuOfDay} day={date.getDate()} /> 					
 							}
 						})}
 					</div>
+					<Submenu/>
 			</div>
 		);
 	}

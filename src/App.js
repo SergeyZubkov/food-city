@@ -10,10 +10,6 @@ import Callback from './pages/callback/Callback';
 import Subheader from './commons/subheader/Subheader';
 import DeliveryZone from './pages/deliveryZone/DeliveryZone';
 
-import getMsToToggleMenuOnNextDay from './utils/getMsToToggleMenuOnNextDay';
-import getDayMenu from './utils/getDayMenu';
-import getNextDayMenu from './utils/getNextDayMenu';
-import getMenuDay from './utils/getMenuDay';
 
 import menuDataService from './utils/menuDataService';
 
@@ -23,8 +19,8 @@ class App extends Component {
 		super(props);
 		
 		this.state = {
-			menu: null,
-			menuDay: null
+			currentMenu: null,
+			menuDayName: null
 		}
 	}
 
@@ -34,24 +30,25 @@ class App extends Component {
 
 	setMenu() {
 		const timeOfNextDay = menuDataService.getMsToToggleMenuOnNextDay();
-		console.log(timeOfNextDay);
+
 		if(timeOfNextDay > 0) {
-			let menu = getDayMenu();
+			let currentMenu = menuDataService.getTodayMenu();
 			this.setState({
-				menu: menu,
-				menuDay: getMenuDay(menu).toLowerCase()
+				currentMenu,
+				menuDayName: menuDataService.getDayName(currentMenu).toLowerCase()
 			});
 			this.toggleMenuTimer = setTimeout(() => this.setMenu(), timeOfNextDay);
 		} else {
-			let menu = getNextDayMenu();
+			let currentMenu = menuDataService.getNextDayMenu();
+			console.log(currentMenu);
 			this.setState({
-				menu: menu,
-				menuDay: getMenuDay(menu).toLowerCase()
+				currentMenu,
+				menuDayName: menuDataService.getDayName(currentMenu).toLowerCase()
 			});
 		}
 	}
 
-	componentDidMount() {
+	componentWillUnmount() {
 		clearTimeout(this.toggleMenuTimer);
 	}
 
@@ -60,12 +57,12 @@ class App extends Component {
 		return (
 			<Router>
 				<div className='wrapper'>
-					<Header menuDay={this.state.menuDay} />
+					<Header />
 					<Subheader />
 					<div
 						className='content'
 					>
-						<Route exact path="/main" render={props => <Main menu={this.state.menu} menuDay={this.state.menuDay}/>}/>
+						<Route exact path="/main" render={props => <Main menu={this.state.currentMenu} menuDayName={this.state.menuDayName}/>}/>
 						<Route path="/menu" component={Menu}/>
 						<Route path="/callback" component={Callback}/>
 						<Route path="/delivery-zone" component={DeliveryZone}/>

@@ -5,7 +5,7 @@
 	font-size: 15px;
 	margin-bottom: 10px;
 	width: 19%;
-  height: 300px;
+  height: 400px;
 	box-sizing: border-box;
 	vertical-align: top;
   background: rgba(255, 255, 255, 0.28);
@@ -33,6 +33,14 @@
 .day-menu-item__category {
 	font-size: 12px;
 	font-weight: 300;
+}
+
+.day-menu-item__category-or {
+  font-size: 9px;
+}
+
+.day-menu-item__category-or-off {
+  display: none;
 }
 
 @media only screen and (max-width: 840px) {

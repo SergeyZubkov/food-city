@@ -21,7 +21,7 @@ class DayMenuItem extends Component {
 					>
 						Салат
 					</div>
-					{menu.salad}
+					{menu.salad} <span className='day-menu-item__category-or'>или</span> <i>{menu.asalad}</i>*
 				</div>
 								<div
 					className='day-menu-item__item'
@@ -31,7 +31,7 @@ class DayMenuItem extends Component {
 					>
 						Суп
 					</div>
-					{menu.soup}
+					{menu.soup} <span className='day-menu-item__category-or'>или</span> <i>{menu.asoup}</i>*
 				</div>
 				<div
 					className='day-menu-item__item'
@@ -41,9 +41,9 @@ class DayMenuItem extends Component {
 					>
 						Горячее
 					</div>
-					{menu.hotter}
+					{menu.hotter} <span className='day-menu-item__category-or'>или</span> <i>{menu.ahotter}</i>*
 				</div>
-				{menu.sidedish&&<div
+				<div
 					className='day-menu-item__item'
 				>
 					<div
@@ -51,8 +51,8 @@ class DayMenuItem extends Component {
 					>
 						Гарнир
 					</div>
-					{menu.sidedish}
-				</div>}
+					{menu.dish} <span className={menu.dish ? "day-menu-item__category-or": "day-menu-item__category-or-off"}>или</span> <i>{menu.adish}</i>*
+				</div>
 			</div>
 		)
 		: <div className='day-menu-item day-menu-item_inactive'>
